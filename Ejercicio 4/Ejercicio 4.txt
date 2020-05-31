@@ -1,0 +1,7 @@
+SELECT usa.City, f.colYear, f.colMonth, 
+AVG (f.ArrDelay) AS `prom_arribadas`
+FROM Flights f 
+LEFT JOIN USAirports usa 
+on f.origin = usa.IATA
+GROUP by usa.City, f.colYear, f.colMonth
+ORDER by usa.City asc, f.colYear ASC, f.colMonth ASC 

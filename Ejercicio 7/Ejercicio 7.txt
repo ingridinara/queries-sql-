@@ -1,0 +1,9 @@
+SELECT c.CarrierCode AS `UniqueCarrier`, 
+AVG (f.ArrDelay) 
+AS `AvgArrDelay`
+FROM Flights f
+INNER JOIN Carriers c
+on c.CarrierCode = f.UniqueCarrier 
+GROUP by c.CarrierCode
+HAVING AVG (f.ArrDelay) > '10.0000'
+order by AVG (f.ArrDelay) DESC

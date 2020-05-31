@@ -1,0 +1,3 @@
+Ejercício 1:
+
+SELECT count( * ) as total FROM Flights;

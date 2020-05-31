@@ -1,0 +1,2 @@
+
+SELECT origin, AVG (ArrDelay) As AvgArrDelay , AVG (DepDelay) As AvgDepDelay FROM `Flights` GROUP BY Origin;

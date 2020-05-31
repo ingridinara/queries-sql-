@@ -1,0 +1,5 @@
+
+SELECT Origin, colYear, colMonth, AVG (ArrDelay) AS `prom_arribadas`
+FROM Flights
+GROUP by Origin, colYear, colMonth
+ORDER by Origin asc, colYear ASC, colMonth ASC 

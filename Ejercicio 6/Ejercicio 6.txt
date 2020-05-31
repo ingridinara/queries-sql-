@@ -1,0 +1,5 @@
+select TailNum, SUM(Distance) AS `totalDistance` 
+from Flights 
+WHERE COALESCE(TailNum, '') != '' 
+group by TailNum 
+ORDER BY `totalDistance` DESC LIMIT 10

@@ -1,0 +1,6 @@
+SELECT UniqueCarrier, colYear, colMonth, SUM(Cancelled) 
+as `Total_Cancelled` 
+FROM Flights 
+GROUP by UniqueCarrier, colYear, colMonth 
+HAVING `Total_Cancelled` > 0 
+ORDER by `Total_Cancelled` DESC
